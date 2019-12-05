@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SaipherLucas.Domain.Entities.Voo">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAAABAAA=</HashCode>
+      <FileName>Entities\Voo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaipherLucas.Domain.Entities.Aeronave">
+    <Position X="6" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Entities\Aeronave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaipherLucas.Domain.Entities.Aeroporto">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Entities\Aeroporto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaipherLucas.Domain.Entities.Base.PlanoVoo">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <AssociationLine Name="AeroportoOrigem" Type="SaipherLucas.Domain.Entities.Aeroporto">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.131" Y="0.518" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAQAAAAAAAgQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\PlanoVoo.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Aeronave" />
+      <Property Name="AeroportoDestino" />
+      <Property Name="AeroportoOrigem" />
+      <Property Name="Voo" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

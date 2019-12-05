@@ -39,7 +39,6 @@ namespace SaipherLucas.Domain.Services
             planovoo = _repositoryPlanoVoo.Adicionar(planovoo);
 
             return (AdicionarPlanoVooResponse)planovoo;
-
         }
 
         public AlterarPlanoVooResponse Alterar(AlterarPlanoVooRequest request)

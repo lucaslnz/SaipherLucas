@@ -20,35 +20,39 @@ namespace SaipherLucas.Domain.Entities
 
         public PlanoVoo(Guid idAeroportoOrigem, Guid idAeroportoDestino, Guid idAeronave, Guid idVoo)
         {
-            IdAeroportoOrigem = idAeroportoOrigem;
-            IdAeroportoDestino = idAeroportoDestino;
-            IdAeronave = idAeronave;
-            IdVoo = idVoo;
-
-            ValidarPlanoVoo();
+            IdAeroportoOrigem = ValidarGuid(idAeroportoOrigem, "Id do aeroporto de origem");
+            IdAeroportoDestino = ValidarGuid(idAeroportoDestino, "Id do aeroporto de destino");
+            IdAeronave = ValidarGuid(idAeronave, "Id da aeronave");
+            IdVoo = ValidarGuid(idVoo, "Id do voo");
         }
 
         public void AlterarPlanoVoo(Guid idAeroportoOrigem, Guid idAeroportoDestino, Guid idAeronave, Guid idVoo)
         {
-            IdAeroportoOrigem = idAeroportoOrigem;
-            IdAeroportoDestino = idAeroportoDestino;
-            IdAeronave = idAeronave;
-            IdVoo = idVoo;
-
-            ValidarPlanoVoo();
+            IdAeroportoOrigem = ValidarGuid(idAeroportoOrigem, "Id do aeroporto de origem");
+            IdAeroportoDestino = ValidarGuid(idAeroportoDestino, "Id do aeroporto de destino");
+            IdAeronave = ValidarGuid(idAeronave, "Id da aeronave");
+            IdVoo = ValidarGuid(idVoo, "Id do voo");
         }
 
-        void ValidarPlanoVoo()
+        Guid ValidarGuid(Guid id, string nomePropriedade)
         {
-            new AddNotifications<PlanoVoo>(this)
-                .IfNullOrEmpty(x => Convert.ToString(x.IdAeroportoOrigem), Message.X0_E_OBRIGATORIO.ToFormat("Id do aeroporto de origem"))
-                .IfNullOrEmpty(x => Convert.ToString(x.IdAeroportoDestino), Message.X0_E_OBRIGATORIO.ToFormat("Id do aeroporto de destino"))
-                .IfNullOrEmpty(x => Convert.ToString(x.IdAeronave), Message.X0_E_OBRIGATORIO.ToFormat("Id da aeronave"))
-                .IfNullOrEmpty(x => Convert.ToString(x.IdVoo), Message.X0_E_OBRIGATORIO.ToFormat("Id do voo"));
-            //.IfNull(x => x.IdAeroportoOrigem, Message.X0_E_OBRIGATORIO.ToFormat("Id do aeroporto de origem"))
-            //.IfNull(x => x.IdAeroportoDestino, Message.X0_E_OBRIGATORIO.ToFormat("Id do aeroporto de destino"))
-            //.IfNull(x => x.IdAeronave, Message.X0_E_OBRIGATORIO.ToFormat("Id da aeronave"))
-            //.IfNull(x => x.IdVoo, Message.X0_E_OBRIGATORIO.ToFormat("Id do voo"));
+            if(Convert.ToString(id) == "00000000-0000-0000-0000-000000000000")
+            {
+                AddNotification(nomePropriedade, Message.X0_INVALIDO.ToFormat(nomePropriedade));
+                return id;
+            }
+            else 
+            {
+                if (Guid.TryParseExact(Convert.ToString(id), "D", out var guidValido))
+                {
+                    return guidValido;
+                }
+                else
+                {
+                    AddNotification(nomePropriedade, Message.X0_INVALIDO.ToFormat(nomePropriedade));
+                    return new Guid("00000000-0000-0000-0000-000000000000");
+                }
+            }
         }
     }
 }

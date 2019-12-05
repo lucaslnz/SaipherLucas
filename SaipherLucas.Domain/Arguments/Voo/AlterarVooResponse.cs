@@ -15,6 +15,9 @@ namespace SaipherLucas.Domain.Arguments.Voo
             return new AlterarVooResponse()
             {
                 Id = entidade.Id,
+                Numero = entidade.Numero,
+                Data = entidade.Data,
+                Horario = entidade.Horario,
                 Message = Resources.Message.OPERACAO_REALIZADA_COM_SUCESSO
             };
         }

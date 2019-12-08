@@ -79,5 +79,20 @@ namespace SaipherLucas.Api.Controllers
                 return await ResponseExceptionAsync(ex);
             }
         }
+
+        [Route("Consultar")]
+        [HttpGet]
+        public async Task<HttpResponseMessage> Consultar(Guid Id)
+        {
+            try
+            {
+                var response = _servicePlanoVoo.Consultar(Id);
+                return await ResponseAsync(response, _servicePlanoVoo);
+            }
+            catch (Exception ex)
+            {
+                return await ResponseExceptionAsync(ex);
+            }
+        }
     }
 }

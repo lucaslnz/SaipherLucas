@@ -10,7 +10,8 @@ namespace SaipherLucas.Domain.Interface.Services
     {
         AdicionarPlanoVooResponse Adicionar(AdicionarPlanoVooRequest request);
         AlterarPlanoVooResponse Alterar(AlterarPlanoVooRequest request);
-        IEnumerable<PlanoVooResponse> Listar();
+        IEnumerable<PlanoVooListResponse> Listar();
         BaseResponse Excluir(Guid id);
+        PlanoVooResponse Consultar(Guid id);
     }
 }

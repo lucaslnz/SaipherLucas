@@ -8,6 +8,8 @@ namespace SaipherLucas.Domain.Interface.Repositories
 {
     public interface IRepositoryPlanoVoo : IBaseRepository<PlanoVoo, Guid>
     {
-        IQueryable<PlanoVooResponse> ListarPlanos();
+        IQueryable<PlanoVooListResponse> ListarPlanos();
+
+        IQueryable<PlanoVooResponse> Consultar(Guid id);
     }
 }

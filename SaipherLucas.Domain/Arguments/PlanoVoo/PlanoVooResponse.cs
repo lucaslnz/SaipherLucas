@@ -1,23 +1,22 @@
 ﻿using System;
-using SaipherLucas.Domain.Entities;
 
 namespace SaipherLucas.Domain.Arguments.PlanoVoo
 {
     public class PlanoVooResponse
     {
         public Guid Id { get; set; }
-        //public Guid IdAeroportoOrigem { get; set; }
-        //public Guid IdAeroportoDestino { get; set; }
-        //public Guid IdAeronave { get; set; }
-        //public Guid IdVoo { get; set; }
-        public string AeroportoOrigemNome { get; set; }
-        public string AeroportoOrigemSigla { get; set; }
-        public string AeroportoDestinoNome { get; set; }
-        public string AeroportoDestinoSigla { get; set; }
-        public string VooNumero { get; set; }
-        public DateTime VooData { get; set; }
-        public DateTime VooHorario { get; set; }
-        public string AeronaveMatricula { get; set; }
-        public string AeronaveTipo { get; set; }
+        public Entities.Aeroporto aeroportoOrigem;
+        public Entities.Aeroporto aeroportoDestino;
+        public Entities.Voo voo;
+        public Entities.Aeronave aeronave;
+
+        //public PlanoVooResponse(Guid id, Entities.Aeroporto aeroportoOrigem, Entities.Aeroporto aeroportoDestino, Entities.Voo voo, Entities.Aeronave aeronave)
+        //{
+        //    Id = id;
+        //    this.aeroportoOrigem = aeroportoOrigem;
+        //    this.aeroportoDestino = aeroportoDestino;
+        //    this.voo = voo;
+        //    this.aeronave = aeronave;
+        //}
     }
 }

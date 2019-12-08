@@ -193,6 +193,7 @@
     <Compile Include="Arguments\Aeroporto\AlterarAeroportoResponse.cs" />
     <Compile Include="Arguments\Base\BaseResponse.cs" />
     <Compile Include="Arguments\PlanoVoo\PlanoVooResponse.cs" />
+    <Compile Include="Arguments\PlanoVoo\PlanoVooListResponse.cs" />
     <Compile Include="Arguments\PlanoVoo\AlterarPlanoVooRequest.cs" />
     <Compile Include="Arguments\PlanoVoo\AlterarPlanoVooResponse.cs" />
     <Compile Include="Arguments\PlanoVoo\AdicionarPlanoVooRequest.cs" />

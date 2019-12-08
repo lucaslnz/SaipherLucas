@@ -84,11 +84,25 @@ namespace SaipherLucas.Domain.Services
             return new BaseResponse();
         }
 
-        public IEnumerable<PlanoVooResponse> Listar()
+        public IEnumerable<PlanoVooListResponse> Listar()
         {
-            //_repositoryPlanoVoo.Listar().ToList().Select(planovoo => (PlanoVooResponse)planovoo).ToList();
-
             return _repositoryPlanoVoo.ListarPlanos().ToList();
+        }
+
+        public PlanoVooResponse Consultar(Guid id)
+        {
+            if (!VerificaRequest(id, "Id"))
+                return null;
+
+            PlanoVoo planovoo = _repositoryPlanoVoo.ObterPorId(id);
+
+            if (planovoo == null)
+            {
+                AddNotification("Id", Message.DADOS_NAO_ENCONTRADOS);
+                return null;
+            }
+
+            return _repositoryPlanoVoo.Consultar(id).FirstOrDefault();
         }
     }
 }

@@ -28,10 +28,10 @@ namespace SaipherLucas.Infra.Persistence.Repositories
                                                 select new PlanoVooResponse
                                                 {
                                                     Id = a.Id,
-                                                    aeroportoOrigem = b,
-                                                    aeroportoDestino = c,
-                                                    voo = d,
-                                                    aeronave = e
+                                                    AeroportoOrigem = b,
+                                                    AeroportoDestino = c,
+                                                    Voo = d,
+                                                    Aeronave = e
                                                 });
             return query;
         }

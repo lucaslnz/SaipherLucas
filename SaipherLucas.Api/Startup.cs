@@ -44,10 +44,10 @@ namespace SaipherLucas.Api
             //Compacta retorno de cada requisição realizada para api
             config.MessageHandlers.Insert(0, new ServerCompressionHandler(new GZipCompressor(), new DeflateCompressor()));
 
-            // Modifica a identação
-            var jsonSettings = formatters.JsonFormatter.SerializerSettings;
-            jsonSettings.Formatting = Formatting.Indented;
-            jsonSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            // Modifica a identação para retornar sempre em minúsculo
+            //var jsonSettings = formatters.JsonFormatter.SerializerSettings;
+            //jsonSettings.Formatting = Formatting.Indented;
+            //jsonSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
             // Modifica a serialização
             formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.None;

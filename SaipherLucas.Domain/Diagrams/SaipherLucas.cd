@@ -1,43 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SaipherLucas.Domain.Entities.Voo">
-    <Position X="8" Y="1" Width="1.5" />
+    <Position X="11.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAAABAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAAgBAAA=</HashCode>
       <FileName>Entities\Voo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SaipherLucas.Domain.Entities.Aeronave">
-    <Position X="6" Y="1" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <HashCode>AAAKAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
       <FileName>Entities\Aeronave.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SaipherLucas.Domain.Entities.Aeroporto">
-    <Position X="3.75" Y="1" Width="1.5" />
+    <Position X="2.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAEAEAAAA=</HashCode>
       <FileName>Entities\Aeroporto.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SaipherLucas.Domain.Entities.Base.PlanoVoo">
-    <Position X="6" Y="4.75" Width="1.5" />
-    <AssociationLine Name="AeroportoOrigem" Type="SaipherLucas.Domain.Entities.Aeroporto">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.131" Y="0.518" />
-      </MemberNameLabel>
-    </AssociationLine>
+  <Class Name="SaipherLucas.Domain.Entities.PlanoVoo">
+    <Position X="7" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAEAAAAQAAAAAAAgQAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AABAAgAAAQAAAAAAAAAAAAAACAAAAAAAAAAAEAAAgAA=</HashCode>
       <FileName>Entities\PlanoVoo.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Aeronave" />
-      <Property Name="AeroportoDestino" />
-      <Property Name="AeroportoOrigem" />
-      <Property Name="Voo" />
-    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

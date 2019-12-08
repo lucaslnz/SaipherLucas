@@ -1,6 +1,7 @@
 ﻿using SaipherLucas.Api.Controllers.Base;
 using SaipherLucas.Domain.Arguments.PlanoVoo;
 using SaipherLucas.Domain.Interface.Services;
+using SaipherLucas.Infra.Persistence;
 using SaipherLucas.Infra.Transactions;
 using System;
 using System.Net.Http;

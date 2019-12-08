@@ -7,13 +7,15 @@ using SaipherLucas.Domain.Resources;
 using SaipherLucas.Domain.Services.Base;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace SaipherLucas.Domain.Services
 {
-    public class ServicePlanoVoo : ServiceBase, IServicePlanoVoo
+    public class ServicePlanoVoo :  ServiceBase, IServicePlanoVoo
     {
         private readonly IRepositoryPlanoVoo _repositoryPlanoVoo;
+
         public ServicePlanoVoo()
         {
 
@@ -84,7 +86,9 @@ namespace SaipherLucas.Domain.Services
 
         public IEnumerable<PlanoVooResponse> Listar()
         {
-            return _repositoryPlanoVoo.Listar().ToList().Select(planovoo => (PlanoVooResponse)planovoo).ToList();
+            //_repositoryPlanoVoo.Listar().ToList().Select(planovoo => (PlanoVooResponse)planovoo).ToList();
+
+            return _repositoryPlanoVoo.ListarPlanos().ToList();
         }
     }
 }
